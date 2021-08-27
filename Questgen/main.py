@@ -69,7 +69,7 @@ class QGen:
         #text = inp['input_text']
         modified_text = inp['input_text']
         #sentences = tokenize_sentences(text)
-        #sentences = [text]
+        sentences = [text]
         #joiner = " "
         #modified_text = joiner.join(sentences)
 
@@ -113,7 +113,7 @@ class QGen:
 
         modified_text = inp['input_text']
         #sentences = tokenize_sentences(text)
-        #sentences = [text]
+        sentences = [text]
         #joiner = " "
         #modified_text = joiner.join(sentences)
 
@@ -230,7 +230,7 @@ class BoolQGen:
         modified_text = inp['input_text']
         num= inp['max_questions']
         #sentences = tokenize_sentences(text)
-        #sentences = [text]
+        sentences = [text]
         #joiner = " "
         #modified_text = joiner.join(sentences)
         answer = self.random_choice()
