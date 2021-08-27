@@ -244,7 +244,7 @@ class BoolQGen:
             torch.cuda.empty_cache()
         
         final= {}
-        final['Text']= text
+        final['Text']= modified_text
         final['Count']= num
         final['Boolean Questions']= output
             
