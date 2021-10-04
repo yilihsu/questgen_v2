@@ -149,7 +149,7 @@ def get_nouns_multipartite(text):
 
     extractor = pke.unsupervised.MultipartiteRank()
     extractor.load_document(input=text, language='en')
-    pos = {'PROPN', 'NOUN', 'ADJ', 'NUM', 'ADV'}
+    pos = {'PROPN', 'NOUN', 'ADJ', 'NUM', 'ADV' ,'DET'}
     stoplist = list(string.punctuation)
     stoplist += stopwords.words('english')
     extractor.candidate_selection(pos=pos, stoplist=stoplist)
