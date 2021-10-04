@@ -63,7 +63,7 @@ class QGen:
         start = time.time()
         inp = {
             "input_text": payload.get("input_text"),
-            "max_questions": payload.get("max_questions", 4)
+            "max_questions": payload.get("max_questions", 10)
         }
 
         #text = inp['input_text']
@@ -74,7 +74,7 @@ class QGen:
         #modified_text = joiner.join(sentences)
 
 
-        keywords = get_keywords(self.nlp,modified_text,inp['max_questions'],self.s2v,self.fdist,self.normalized_levenshtein,len(sentences) )
+        keywords = get_keywords(self.nlp,modified_text,inp['max_questions'],self.s2v,self.fdist,self.normalized_levenshtein,10 )
 
 
         keyword_sentence_mapping = get_sentences_for_keyword(keywords, sentences)
