@@ -248,16 +248,16 @@ def generate_questions_mcq(keyword_sent_mapping,device,tokenizer,model,sense2vec
         individual_question["question_type"] = "MCQ"
         individual_question["answer"] = val
         individual_question["id"] = index+1
-        individual_question["options"], individual_question["options_algorithm"] = get_options(val, sense2vec)
+#        individual_question["options"], individual_question["options_algorithm"] = get_options(val, sense2vec)
 
-        individual_question["options"] =  filter_phrases(individual_question["options"], 10,normalized_levenshtein)
+#        individual_question["options"] =  filter_phrases(individual_question["options"], 10,normalized_levenshtein)
         index = 3
-        individual_question["extra_options"]= individual_question["options"][index:]
-        individual_question["options"] = individual_question["options"][:index]
+#        individual_question["extra_options"]= individual_question["options"][index:]
+#        individual_question["options"] = individual_question["options"][:index]
         individual_question["context"] = keyword_sent_mapping[val]
      
-        if len(individual_question["options"])>0:
-            output_array["questions"].append(individual_question)
+#        if len(individual_question["options"])>0:
+        output_array["questions"].append(individual_question)
 
     return output_array
 
