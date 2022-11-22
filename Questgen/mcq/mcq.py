@@ -226,7 +226,7 @@ def generate_questions_mcq(keyword_sent_mapping,device,tokenizer,model,sense2vec
     encoding = tokenizer.batch_encode_plus(batch_text, pad_to_max_length=True, return_tensors="pt")
 
 
-    print ("Running model for generation")
+#    print ("Running model for generation")
     input_ids, attention_masks = encoding["input_ids"].to(device), encoding["attention_mask"].to(device)
 
     with torch.no_grad():
